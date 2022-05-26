@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap-4.4.1/dist/css/bootstrap.min.css">
+    <title>Porsche restaurant</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/Navbar.html">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/Navbar.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/TablesAbout.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/FormLogin.html">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row">
+            <!-- 3+3 = 6. Tehát egy div class="col-6" így osztjuk el 12 egyenlő részre -->
+          <div class="col-3"></div>
+          <div class="col-6">
+              <h3>Hamburger rendelés</h3>
+                <form action="">
+                    <div class="form-group"></div>
+                    <label for="">Feltét</label>
+                    <input type="text" name ="top-input" class="form-control">
+                    <div class="form-group">
+                        <div class="form-group"></div>
+                        <label for="">Mennyiség</label>
+                        <!-- <input type="number" name ="amount-input" class="form-control"> -->
+                        <!-- beállítani alapból 1-re az értéket -->
+                        <input type="number" name ="amount-input" class="form-control" value="1">
+                        <!-- small elem hozzáadása -->
+                        <small class="form-text text-muted">
+                            Minimum 1, maximum 10db
+                        </small>
+                    </div>
+                    <!-- button.btn.btn-primary -->
+                    <!-- <button class="btn btn-primary">Megrendelés</button> -->
+                    <div class="form-group">
+                        Fizetendő: <span class="show-amount">0</span> Ft
+                    </div>
+                    <button onclick="calcAmount()" type="button" class="btn btn-primary">Megrendelés</button>
+                </form>
+            </div>
+          </div>
+          <div class="col-3"></div>
+      </div>
+      <script src="js/main.js"></script>
+      <script src="js/scope.js"></script>
+</body>
+</html>
