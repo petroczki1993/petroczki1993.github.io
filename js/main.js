@@ -1,5 +1,3 @@
-
-//CleanCode
 function calcAmount () {
     let price = 1000;
     let amountInput = document.querySelector("input[name='amount-input']");
@@ -24,65 +22,34 @@ function showSumPrice (price = 1000, amountNumber = 1) {
 
 }
 
+//Window event
+//Előny: Több eseménykezelő is futtatható pl. calcAmount fv.
+// let sendButton = document.querySelector("form .btn.btn-primary");
+// sendButton.addEventListener("click", function() {
+//     alert("Hello JS!");
+// });
 
-// function calcAmount () {
-//     let price = 1000;
-//     let amountInput = document.querySelector("input[name='amount-input']");
-//     let showAmount = document.querySelector("span.show-amount");
-//     let amountNumber = parseInt(amountInput.value);
-//     //három operandusos kifejezés
-//     //így kezeljük le, ha üresen hagyja a felhasználó a megrendelést
-//      amountNumber = isNaN(amountNumber) ? 0 : amountNumber;
-    
-//     if(amountNumber > 10) {
-//         alert("Maximum 10 terméket vásáorolhat");
-//         //return; --> függvény visszatér
-        
-//     } else if(amountNumber < 1) {
-//         alert("Minimum 1 terméket kell vásárolnia");
-//     } else {
+//Windows event - Lap átmérezetés
+window.addEventListener("resize",function() {
+    console.log(this.innerHeight, this.innerWidth);
+});
 
-//         let amount = parseInt(amountInput.value)*price;
-    
-//         showAmount.innerHTML = amount;
-//     }
-// }
+//Űrlap események
 
-// function calcAmount () {
-//     let price = 1000;
-//     let amountInput = document.querySelector("input[name='amount-input']");
-//     let showAmount = document.querySelector("span.show-amount");
-//     let amountNumber = parseInt(amountInput.value);
+let orderForm = document.querySelector("#orderForm");
+orderForm.addEventListener("submit",function(event) {
+    //alapvetőenn ha rákattintanak a küldés gombra az oldalon --> lefrissül a böngészőoldal --> js-ek újrabetöltődnek és megszakad a folyamat
+    //preventDefault = megelőzi az alapértelmezett működést
+    event.preventDefault();
+    //console.log(this);
 
-//     if(amountNumber > 10) {
-//         alert("Maximum 10 terméket vásáorolhat");
-//         //return; --> függvény visszatér
-        
-//     } else if(amountNumber < 1) {
-//         alert("Minimum 1 terméket kell vásárolnia");
-//     } else {
+    let inputs = this.querySelectorAll("input");
+    let values = {};
 
-//         let amount = parseInt(amountInput.value)*price;
-    
-//         showAmount.innerHTML = amount;
-//     }
-// }
+    for (let i = 0; i < inputs.length; i++) {
+        //values kulcsa az inputs.name
+        values[inputs[i].name] = inputs[i].value
+    }
 
-
-// function calcAmount () {
-//     let price = 1000;
-//     let amountInput = document.querySelector("input[name='amount-input']");
-//     let showAmount = document.querySelector("span.show-amount");
-//     let amount = parseInt(amountInput.value)*price;
-
-//     showAmount.innerHTML = amount;
-
-// }
-
-// function calcAmount () {
-//     let price = 1000;
-//     let amountInput = document.querySelector("input[name='amount-input']");
-//     let amount = parseInt(amountInput.value)*price;
-//     //felugró ablakban jelenik meg
-//     alert("Fizetendő: " + amount + "Ft");
-// }
+    console.log( values );
+});
