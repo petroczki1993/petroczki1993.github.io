@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,161 +10,39 @@
     <link href="fontawesome/css/all.css" rel="stylesheet">
     <title>About</title>
 </head>
+
 <body>
-    <div class = "container">
+    <div class="container">
         <div class="row">
-          <!-- .col-2 + enter, ez az  oldalsáv hozzáadása -->
-          <div class="col-2"></div>
-          <div class="col-8">
-            <!-- 1. table class-t hozzá kell adni a táblázathoz és akkor szépen berendezi -->
-            <!-- 2. table-striped attribútum-->
-            <!-- 3. table-bordered keret hozzárendelése -->
-            <!-- 4. table-sm small table -->
-            <!-- 5. table-hover aktuális sor kiemelése-->
-            <table class="table table-striped table-bordered table-hover">
-              <!-- Bootstrap-ben készíteni kell thead-et és tbody-t is!! -->
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Vezetéknév</th>
-                  <th>Keresztnév</th>
-                  <th>Életkor</th>
-                  <!-- Sorok végén létrehozni egy üres th-t -->
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Kiss</td>
-                  <td>János</td>
-                  <td>55</td>
-                  <!-- div class="btn-group" gombokat összeolvasztja -->
-                  <td>
-                    <!-- .btn-group + enter -->
-                    <div class="btn-group">
-                      <!-- button.btn-info btn + enter -->
-                      <button class="btn-info btn">
-                        <!-- ikon hozzáadása -->
-                        <!-- <i class="fa-solid fa-user"></i> -->
-                        Módosítás
-                      </button>
-                      <button class="btn-danger btn">
-                        Törlés
-                      </button>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Kiss</td>
-                  <td>János</td>
-                  <td>55</td>
-                  <td>
-                    <div class="btn-group">
-                      <button class="btn-info btn">
-                        Módosítás
-                      </button>
-                      <button class="btn-danger btn">
-                        Törlés
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Kiss</td>
-                  <td>János</td>
-                  <td>55</td>
-                  <td>
-                    <div class="btn-group">
-                      <button class="btn-info btn">
-                        Módosítás
-                      </button>
-                      <button class="btn-danger btn">
-                        Törlés
-                      </button>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <!-- Adott sor kiemelése az Alerts.html alapján -->
-                <tr class="alert alert-danger">
-                  <td>1</td>
-                  <td>Kiss</td>
-                  <td>János</td>
-                  <td>55</td>
-                  <td>
-                    <div class="btn-group">
-                      <button class="btn-info btn">
-                        Módosítás
-                      </button>
-                      <button class="btn-danger btn">
-                        Törlés
-                      </button>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Kiss</td>
-                  <td>János</td>
-                  <td>55</td>
-                  <td>
-                    <div class="btn-group">
-                      <button class="btn-info btn">
-                        Módosítás
-                      </button>
-                      <button class="btn-danger btn">
-                        Törlés
-                      </button>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Kiss</td>
-                  <td>János</td>
-                  <td>55</td>
-                  <td>
-                    <div class="btn-group">
-                      <button class="btn-info btn">
-                        Módosítás
-                      </button>
-                      <button class="btn-danger btn">
-                        Törlés
-                      </button>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Kiss</td>
-                  <td>János</td>
-                  <td>55</td>
-                  <td>
-                    <div class="btn-group">
-                      <button class="btn-info btn">
-                        Módosítás
-                      </button>
-                      <button class="btn-danger btn">
-                        Törlés
-                      </button>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+            <!-- .col-2 + enter, ez az  oldalsáv hozzáadása -->
+            <div class="col-2"></div>
+            <div class="col-8">
+                <!-- 1. table class-t hozzá kell adni a táblázathoz és akkor szépen berendezi -->
+                <!-- 2. table-striped attribútum-->
+                <!-- 3. table-bordered keret hozzárendelése -->
+                <!-- 4. table-sm small table -->
+                <!-- 5. table-hover aktuális sor kiemelése-->
+                <table id="userTable" class="table table-striped table-bordered table-hover">
+                    <!-- Bootstrap-ben készíteni kell thead-et és tbody-t is!! -->
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Vezetéknév</th>
+                            <th>Keresztnév</th>
+                            <th>Életkor</th>
+                            <!-- Sorok végén létrehozni egy üres th-t -->
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div class="col-2"></div>
         <!-- Középre igazítva 8 oszlop szélesen kerül be a táblázat -->
     </div>
-
+    <script src="js/TablesAbout.js"></script>
 </body>
+
 </html>

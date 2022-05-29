@@ -1,9 +1,3 @@
-<!-- Változtatások V3:
-- topInput
--->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,10 +37,10 @@
       <!-- 3+3 = 6. Tehát egy div class="col-6" így osztjuk el 12 egyenlő részre -->
       <div class="col-3"></div>
       <div class="col-6">
-        <div class="welcome" style="text-align:center"><h3>Hamburger rendelés</h3></div>
-        <div class="alert alert-info alert-dismissible fade show" role="alert" style="text-align:center">
-          <strong>Kedves vásárló!</strong>
-          <p>A rendeléshez kérjük töltse ki az űrlapot.</p>
+        <h3>Hamburger rendelés</h3>
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+          <strong>Kedves vásárlón!</strong>
+          A rendeléshez kérjük töltse ki az űrlapot.
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -54,8 +48,7 @@
         <form id="orderForm" action="">
           <div class="form-group">
             <label for="">Feltét</label>
-            <select id="topInput" name="top-input" class="form-control">
-              </select>
+            <input id="topInput" type="text" name="top-input" class="form-control">
           </div>
           <div class="form-group">
             <div class="form-group"></div>

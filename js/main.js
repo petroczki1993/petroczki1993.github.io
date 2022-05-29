@@ -34,7 +34,7 @@ window.addEventListener("resize",function() {
     console.log(this.innerHeight, this.innerWidth);
 });
 
-//Űrlap események
+//Űrlap események (9.2.4)
 
 let orderForm = document.querySelector("#orderForm");
 orderForm.addEventListener("submit",function(event) {
@@ -53,3 +53,33 @@ orderForm.addEventListener("submit",function(event) {
 
     console.log( values );
 });
+
+//Parent elem kezelése (9.3.3 dokumentum)
+//kiválasztani, minden olyan close osztályú elemet, ami data-dismiss="alert" attribútummal rendelkezik
+let alertCloseButtons = document.querySelectorAll(".close[data-dismiss='alert']");
+let alertCloseEventHandlerFunction = function(event){
+    this.parentElement.style.display = "none"
+};
+//mivel egy tömb, meg kell adni az alertCloseButtons[i] elemét
+for (let i = 0; i < alertCloseButtons.length; i++) {
+    alertCloseButtons[i].addEventListener("click",alertCloseEventHandlerFunction);
+};
+
+//Select elem kitöltése (9.3.4)
+let toppings = [
+    "Szalonna",
+    "Hagyma",
+    "Sajt",
+    "Uborka",
+    "Paradicsom"
+];
+let toppingSelect = document.querySelector("#topInput");
+let index = 0;
+
+while (index < toppings.length) {
+    let option = document.createElement("option");
+    option.value = index;
+    option.innerHTML = toppings[index];
+    toppingSelect.appendChild(option);
+    index++;
+}
